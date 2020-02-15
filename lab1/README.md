@@ -1,6 +1,8 @@
 # Lab 1: The Force Awakens
 In this lab, we will teach you how to use some HTML, CSS and Javascript. We recommend you finish A-C by 2/21 and D-E by 2/28.
 
+Written by Richard "Rick" Xu.
+
 ## A. Setting up the Upstream
 To see the lab in your forked repository, you need to `pull` from what's known as the `upstream`. To set this up, run the command `git remote add upstream git@github.com:rxu18/crimtech-comp-s20.git`. This makes Git know that Rick's repository exists.
 
@@ -31,9 +33,32 @@ In this section we will be editing the `<head>` section of `yoda.html`. Note tha
 1. Add a title to the page. 
 2. Add a favicon. Notice that there is a file named `favicon.ico` in the `img/` folder. Link this to the page using the code `<link rel='shortcut icon' type='image/png' href='img/favicon.ico'>`. (Do you understand what the code does?)
 
-After this, your tab should look like this: ![Tab Image](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i2.JPG)"Logo Title Text 1")
+After this, your tab should look like this: ![Tab Image](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i2.JPG)
 
 ## D. HTML Body
-It is late so I'll write the rest of this later :)
+In this section we will be editing the `<body>` section of `yoda.html` so Yoda and his quote is on the screen. Be sure to commit often!
+
+1. Add a `<p>` tag with the line "To yoda chat I welcome you. Yes, hmmmmm."
+2. Center the text with a `<center>` tag. Your page should look like this: ![Stage 1 of Yoda Chat](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i3.JPG)
+3. Add one of the images of Yoda into the page with an `<img>` tag. Scale it so that Yoda has a prespecified height.
+4. Add in a text box with a somewhat large size. Your page should look like this: ![Stage 2 of Yoda Chat](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i4.JPG)
 
 ## E. Javascript
+In this section we will be writing some plain Javascript that will allow you to talk to Yoda! People seldom write plain Javascripts now, opting for more heavyweight solutions like React and Django. However, plain Javascript is more lightweight. More importantly, React development is 95% Javascript (it uses typescript, which is Javascript with types). So, this lab will be helpful to you.
+1. Add in a button that calls the `respond()` function in `response_handler.js`. You will need to add a `<script>` tag in the `<head>` section of the HTML, and set the `onclick` attribute of the button. If you have done this correctly, pressing the buttom will cause `Hello World!` to appear in your console.
+2. Add code to the `respond()` function so that it changes the image and text of the page. You do not need use the input box or any fancy control flows yet. You may want to use the function `document.getElementById("some_id")`, `setattribute()` and set an ID for the image and text box.
+3. Make the `response()` function log the content of the textbox onto the console.
+4. Now, add `if` statements to decide which image and text the page should change to. You should have the following if structure:
+    * If there is the word `cute` or `baby` in the textbox, have a picture of Baby Yoda.
+    * If there is the word `force` in the textbox, Yoda should be using the force.
+        * If there is both `dark` and `force` in the textbox, Yoda should be battling some Sith lord.
+    * Yoda should say a random quote from either `std_quotes, dark_quotes, force_quotes`. Baby Yoda has not learned those quotes yet.
+    * Yoda loves saying `hmmmmmmmmmmmmm`. We have Yoda print a large, random number of m's.
+5. Change `response()` so that it clears the textbox every time we press the button.
+6. Right now we have to press the button in order to make Yoda change text. It would be a lot easier if we can just press `enter` to update the page! Search up how to do it on Google, and implement it.
+
+## F. Optional Projects
+If you have time and wants to see Yoda become more powerful, try out some of these optional projects.
+
+* You can use CSS to make the page look better. For example: add a background color; make a title for the page and make it look great; make the text bigger; change the font of the text.
+* You can add some actual "Machine Learning" or "NLP" to the page! Add what is known as "sentiment analysis" to the page by either using an API or a node JS package. This project is a little bigger than the previous entries, but it can be a lot of fun. Talk to me if you want to make it happen.
