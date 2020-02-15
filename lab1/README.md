@@ -57,7 +57,7 @@ In this section we will be writing some plain Javascript that will allow you to 
 5. Change `response()` so that it clears the textbox every time we press the button.
 6. Right now we have to press the button in order to make Yoda change text. It would be a lot easier if we can just press `enter` to update the page! Search up how to do it on Google, and implement it.
 
-Here is how my website looked after this stage: ![Final Yoda Chat](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i5.JPG)
+Here is how my website looked after this stage: ![Final Yoda Chat](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i6.JPG)
 
 ## F. Optional Projects
 If you have time and wants to see Yoda become more powerful, try out some of these optional projects.
