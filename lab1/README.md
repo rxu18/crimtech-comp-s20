@@ -4,7 +4,7 @@ In this lab, we will teach you how to use some HTML, CSS and Javascript. We reco
 Written by Richard "Rick" Xu.
 
 ## A. Setting up the Upstream
-To see the lab in your forked repository, you need to `pull` from what's known as the `upstream`. To set this up, run the command `git remote add upstream git@github.com:rxu18/crimtech-comp-s20.git`. This makes Git know that Rick's repository exists.
+To see the lab in your forked repository, you need to `pull` from what's known as the `upstream`. To set this up, run the command `git remote add upstream https://github.com/rxu18/crimtech-comp-s20.git`. This makes Git know that Rick's repository exists.
 
 Next, run `git pull upstream master`. This fetches all the data for lab 1 and puts them on your computer.
 
