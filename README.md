@@ -2,10 +2,8 @@
 Welcome to the Tech Comp! Below is the schedule for the comp.
 
 * 02/08: Intro & Setup (Lab 0 help)
-* 02/14: *Lab 0 Due*
 * 02/15: Intro to Javascript (Lab 1a help)
 * 02/22: Guest lecture 1 (Lab 1b help)
-* 02/28: *Lab 1 Due*
 * 02/29: Intro to React
 * 03/07: Guest lecture 2 (Lab 2a help)
 * 03/14, 03/21: No Meeting (Spring Break)
