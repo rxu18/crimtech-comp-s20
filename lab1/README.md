@@ -31,7 +31,7 @@ In this section we will be editing the `<head>` section of `yoda.html`. Note tha
 1. Add a title to the page. 
 2. Add a favicon. Notice that there is a file named `favicon.ico` in the `img/` folder. Link this to the page using the code `<link rel='shortcut icon' type='image/png' href='img/favicon.ico'>`. (Do you understand what the code does?)
 
-After this, your tab should look like this: ![Tab Image](https://github.com/rxu18/crimtech-comp-s20/raw/master/lab1/img/i2.jpg)"Logo Title Text 1")
+After this, your tab should look like this: ![Tab Image](https://raw.githubusercontent.com/rxu18/crimtech-comp-s20/master/lab1/mdimg_/i2.JPG)"Logo Title Text 1")
 
 ## D. HTML Body
 It is late so I'll write the rest of this later :)
