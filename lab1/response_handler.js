@@ -21,4 +21,5 @@ let std_quotes = ["Patience you must have, my young padawan.",
 
 function respond() {
     // Your Code Here
+    console.log("Hello World!");
 }
