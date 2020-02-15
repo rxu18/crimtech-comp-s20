@@ -63,4 +63,5 @@ Here is how my website looked after this stage: ![Final Yoda Chat](https://raw.g
 If you have time and wants to see Yoda become more powerful, try out some of these optional projects.
 
 * You can use CSS to make the page look better. For example: add a background color; make a title for the page and make it look great; make the text bigger; change the font of the text.
+* We only have 5 quotes in each category. Add more! As a first idea, put the quotes into files (see `quotes/`) and make the Javascript read the file for a random quote. If you want a more advanced solution, you can find a large list of random inspirational quotes, then use one of the "English to Yoda translator" online to make them look like they come from Yoda.
 * You can add some actual "Machine Learning" or "NLP" to the page! Add what is known as "sentiment analysis" to the page by either using an API or a node JS package. This project is a little bigger than the previous entries, but it can be a lot of fun. Talk to me if you want to make it happen.
