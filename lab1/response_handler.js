@@ -20,6 +20,32 @@ let std_quotes = ["Patience you must have, my young padawan.",
 ];
 
 function respond() {
-    // Your Code Here
-    console.log("Hello World!");
+    var text = document.getElementById("text");
+    var image = document.getElementById("image_box");
+    var input = document.getElementById("input");
+    var inp_value = input.value;
+    var prefix = "regular";
+    var suffix = "std";
+
+    if (inp_value.includes("cute") || inp_value.includes("baby")) {
+        prefix = "cute";
+    }
+    else if (inp_value.includes("force")) {
+        suffix = "force";
+        if (inp_value.includes("dark")) {
+            suffix = "dark";
+        }
+    }
+    image.setAttribute("src", "img/" + prefix + "-" + suffix + ".jpg");
+    if (suffix == "dark") {
+        text.innerHTML = dark_quotes[0];
+    }
+    else if (suffix == "force") {
+        text.innerHTML = force_quotes[0];
+    } else {
+        text.innerHTML = std_quotes[0];
+    }
+
+
+    return;
 }
