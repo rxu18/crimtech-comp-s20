@@ -5,5 +5,45 @@
 <body>
 	<script>
 		console.log("Try adding \"console.log('Hello World!');\" to test.html!");
+
+		// Questions 1-2
+		console.log("Hello World!");
+
+		// Question 3
+		x = 42;
+		console.log(x);
+
+		// Question 4
+		x += 378;
+		console.log(x);
+
+		// Question 5
+		y = "string";
+		console.log(x + y);
+
+		// Question 6
+		console.log(y.includes("hello"));
+		console.log(y.repeat(10));
+
+		// Questions 7-8
+		const square = x => isNaN(x) ? -1 : x * x;
+		console.log(square(5));
+		console.log(square(2.5));
+		console.log(square("hello"));
+
+		// Question 9
+		const numberString = x => {
+			if (!Number.isInteger(x) || x <= 0) {
+				return -1;
+			}
+			result = "";
+			for (i = 1; i <= x; i++) {
+				result += i;
+			}
+			return result;
+		}
+		console.log(numberString(2.5));
+		console.log(numberString(-1));
+		console.log(numberString(10));
 	</script>
 </body>

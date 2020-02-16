@@ -19,7 +19,42 @@ let std_quotes = ["Patience you must have, my young padawan.",
 "Difficult to see. Always in motion is the future."
 ];
 
+// returns a random int in half-open interval [a, b)
+const randomInt = (a, b) => {
+    if (!Number.isInteger(a) || !Number.isInteger(b)) {
+        return -1;
+    }
+    var range = b - a;
+    return Math.floor(Math.random() * range) + a;
+}
+
 function respond() {
-    // Your Code Here
-    console.log("Hello World!");
+    var img = document.getElementById("yoda_image");
+    var text = document.getElementById("chat").value;
+    var response = document.getElementById("response");
+    console.log(chat);
+
+    // build new image path and response based on input
+    var newImgPath = "img/";
+    var newResponse = "";
+    var isBabyYoda = (text.includes("cute") || text.includes("baby"));
+    newImgPath += isBabyYoda ? names[0] : names[1];
+    newImgPath += "-";
+    if (text.includes(moods[0])) {
+        newImgPath += moods[0]
+        newResponse += dark_quotes[randomInt(0, dark_quotes.length)];
+    } else if (text.includes(moods[1])) {
+        newImgPath += moods[1]
+        newResponse += force_quotes[randomInt(0, force_quotes.length)];
+    } else {
+        newImgPath += moods[2];
+        newResponse += std_quotes[randomInt(0, std_quotes.length)];
+    }
+    newImgPath += ".jpg";
+
+    // load new image and text
+    img.src = newImgPath;
+    response.innerText = isBabyYoda ? "" : newResponse + " h" + "m".repeat(randomInt(5, 10));
+    document.getElementById("form").reset();
+    return false;       // prevent page refresh
 }
