@@ -26,5 +26,10 @@ See code
 
 D. HTML Body
 ------------
+See code
 
+
+E. Javascript
+-------------
+See code
 
