@@ -4,6 +4,46 @@
 </head>
 <body>
 	<script>
-		console.log("Try adding \"console.log('Hello World!');\" to test.html!");
+		console.log("Hello World!");
+		x = 42 
+		console.log(x)
+		console.log("x + 378 = " + String(x + 378))
+		y = "Konshens"
+		console.log(x + y)
+		console.log(y.includes("Hello"))
+		console.log(y.repeat(10))
+
+		//function to multiply a variable by itself 
+		function square(x){
+			if(isNaN(x)){
+				return -1
+			}
+			else{
+				return x * x
+			}
+		}
+
+		//test funtion square
+		console.log(square(5));
+		console.log(square(2.5));
+		console.log(square("hello"));
+		
+		//writing the function numberString
+		function numberString(i){
+			if(i<1 || isNaN(i)){
+				return "input is not a positive number";
+			}
+			else{
+				var x;
+				var y="";
+				for(x=1; x<=i; x ++){
+					y = y + x;
+				}
+				return y;
+			}
+		}
+
+		//display the results of numberString
+		console.log(numberString(150));
 	</script>
 </body>
