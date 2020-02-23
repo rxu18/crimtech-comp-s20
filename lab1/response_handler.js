@@ -20,6 +20,74 @@ let std_quotes = ["Patience you must have, my young padawan.",
 ];
 
 function respond() {
-    // Your Code Here
-    console.log("Hello World!");
+    var text = document.getElementById('text_input').value;
+    // clear textbox
+    document.getElementById("text_input").value = "";
+    // convert to lowercase
+    text = text.toLowerCase();
+    if (text.includes("cute") || text.includes("baby"))
+    {
+        document.getElementById('yoda_img').src='img/cute-std.jpg'
+        // get random quote
+        var n = Math.floor(Math.random() * std_quotes.length); 
+        str1 = "m".repeat(n+8);
+        str2 = std_quotes[n];
+        str = str2.concat(" h", str1);
+        document.getElementById('yoda_text').textContent=str
+    }
+    else if (text.includes("force"))
+    {
+        if (text.includes("dark"))
+        {
+            // get random quote
+            var n = Math.floor(Math.random() * dark_quotes.length); 
+            str1 = "m".repeat(n+8);
+            str2 = dark_quotes[n];
+            str = str2.concat(" h", str1);
+            document.getElementById('yoda_text').textContent=str;  
+            
+            // get random dark pic
+            var k = Math.floor(Math.random()* 2); 
+            if (k)
+            {
+                pic = "img/cute-dark.jpg";
+            }
+            else
+            {
+                pic = "img/regular-dark.jpg";
+            }
+            document.getElementById('yoda_img').src=pic;           
+        }
+        else
+        {
+            // get random quote
+            var n = Math.floor(Math.random() * force_quotes.length); 
+            str1 = "m".repeat(n+8);
+            str2 = force_quotes[n];
+            str = str2.concat(" h", str1);
+            document.getElementById('yoda_text').textContent=str;  
+
+            // get random dark pic
+            var k = Math.floor(Math.random()* 2); 
+            if (k)
+            {
+                pic = "img/cute-force.jpg";
+            }
+            else
+            {
+                pic = "img/regular-force.jpg";
+            }
+            document.getElementById('yoda_img').src=pic              
+        }
+    }
+
+    input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("btn").click();
+        }
+      });
 }
