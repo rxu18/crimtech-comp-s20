@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-    </head>
-    <body>
+<head>
+	<title> Yoda Chat </title>
+	<link rel="stylesheet" href="test.css">
+	<link rel='shortcut icon' type='image/png' href='img/favicon.ico'>
+	<script type='text/javascript' src='response_handler.js'></script>
+</head>
+<body>
+    <center>
+        <img src="img/regular-std.jpg" id="yoda_img" alt="Yoda" width="50%" height="50%">
+        <p id="yoda_text">To yoda chat I welcome you. Yes, hmmmmm.</p>
+        <input type="text" id="text_input" name="text_input" onkeydown = "if (event.keyCode == 13)
+        document.getElementById('btn').click()"><br><br>
+        <button id="btn" onclick="respond()">Response</button>
+    </center>
 
-    </body>
-</html>
+
+	<script>
+		input.addEventListener("keyup", function(event) {
+		  if (event.keyCode === 13) {
+		   event.preventDefault();
+		   document.getElementById("btn").click();
+		  }
+		});
+	</script>
+		
+</body>
