@@ -20,6 +20,51 @@ let std_quotes = ["Patience you must have, my young padawan.",
 ];
 
 function respond() {
-    // Your Code Here
+
+    var y = document.getElementById("TB").value;
+
+    if (y.includes("cute") || y.includes("baby")){
+        if (y.includes("force")){
+            document.getElementById("STD").src = "img/cute-force.jpg"
+            document.getElementById("SC").innerHTML = force_quotes[Math.floor(Math.random() * force_quotes.length)]; 
+        }
+        else if (y.includes("dark")){
+            if (y.includes("force")){
+                document.getElementById("STD").src = "img/cute-force.jpg"
+                document.getElementById("SC").innerHTML = force_quotes[Math.floor(Math.random() * force_quotes.length)]; 
+            }
+            else {
+            document.getElementById("STD").src = "img/cute-dark.jpg"
+            document.getElementById("SC").innerHTML = dark_quotes[Math.floor(Math.random() * dark_quotes.length)]; 
+            }
+        }
+        else {   
+            document.getElementById("STD").src="img/cute-std.jpg"
+            document.getElementById("SC").innerHTML = dark_quotes[Math.floor(Math.random() * dark_quotes.length)];
+        } 
+    }
+    else if (y.includes("dark")){
+        if (y.includes("force")){
+            document.getElementById("STD").src = "img/regular-force.jpg"
+            document.getElementById("SC").innerHTML = force_quotes[Math.floor(Math.random() * force_quotes.length)]; 
+        }
+        else {
+        document.getElementById("STD").src = "img/regular-dark.jpg"
+        document.getElementById("SC").innerHTML = dark_quotes[Math.floor(Math.random() * dark_quotes.length)]; 
+        }
+    }
+    else if (y.includes("force")){
+        document.getElementById("STD").src="img/regular-force.jpg"
+        document.getElementById("SC").innerHTML = force_quotes[Math.floor(Math.random() * force_quotes.length)]; 
+    }
+    else {
+        var m = "m";
+        document.getElementById("STD").src = "img/regular-std.jpg"
+        document.getElementById("SC").innerHTML = "hm" + m.repeat(Math.floor(Math.random() * 15));
+    }
+
+    document.getElementById("TB").value = '';
+
+    
     console.log("Hello World!");
 }
