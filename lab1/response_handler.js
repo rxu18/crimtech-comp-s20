@@ -64,7 +64,6 @@ function respond() {
     }
 
     document.getElementById("TB").value = '';
-
     
     console.log("Hello World!");
 }

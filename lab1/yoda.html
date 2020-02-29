@@ -12,7 +12,17 @@
             <p id = "SC"> To yoda chat I welcome you. Yes, hmmmmm. </p>
             <br>
             <input type = "text" id = "TB" style = "width: 500px;" >     
-            <button onclick="respond()">Click me</button>
+            <button id = "BT" onclick="respond()">Click me</button>
+
+            <script> 
+                var input = document.getElementById("TB");
+                input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("BT").click();
+                }
+                });
+            </script>
         </center>
         
 
