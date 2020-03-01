@@ -16,10 +16,49 @@ let std_quotes = ["Patience you must have, my young padawan.",
 "When nine hundred years old you reach, look as good you will not.",
 "No! Try not! Do or do not, there is no try.",
 "Judge me by my size, do you?",
-"Difficult to see. Always in motion is the future."
-];
+"Difficult to see. Always in motion is the future."];
+
+window.onload = function () {
+document.getElementById("tb")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("btn").click();
+    }
+});}
+
 
 function respond() {
-    // Your Code Here
-    console.log("Hello World!");
+    var tb = document.getElementById("tb");
+    var img = document.getElementById("pic");
+    var txt = document.getElementById("txt");
+
+    var input = tb.value;
+    if (input.includes("cute") || input.includes("baby")) {
+    	if (input.includes("force")) {
+    		img.setAttribute("src","img/cute-force.jpg");
+    	}
+    	else {
+    		img.setAttribute("src","img/cute-std.jpg");
+    	}
+    }
+    if (input.includes("force") && input.includes("dark")) {
+    	img.setAttribute("src","img/regular-dark.jpg");
+    }
+
+    rand1 = Math.random() * (3) + 1;
+    rand2 = Math.floor(Math.random() * (5));
+    hm = " h".concat("m".repeat(Math.floor(Math.random()*30+10)))
+
+    if (rand1 < 2) {
+    	txt.innerHTML = dark_quotes[rand2].concat(hm);
+    }
+    if (rand1 < 3) {
+    	txt.innerHTML = force_quotes[rand2].concat(hm);
+    }
+    if (rand1 < 4) {
+    	txt.innerHTML = std_quotes[rand2].concat(hm);
+    }
+   	tb.value = '';
+   	tb.placeholder = '';
 }
