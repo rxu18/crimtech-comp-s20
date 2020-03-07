@@ -4,22 +4,22 @@
         <title>Yoda Chat</title>
         <!--using the relation "shortcut icon" is not necessary on updated 
             browsers, "icon" is just enough-->
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+        <!--<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>-->
         <style>
-            p {text-align: center;}
             img {
                 display: block;
                 margin-left: 15%;
                 margin-right: 0%;
-                height: 50;
+                height: 50%;
                 width: 70%;
                 }
         </style>
+        <script src="response_handler.js"></script>
     </head>
     <body>
-        <img src="img/regular-std.jpg" alt="cute-dark" >
-        <p>To YodaChat I welcome you. Yess, hmmm.</p>
-        
+        <img id="myImg" src="img/regular-std.jpg" alt="cute-dark" >
+        <p><center>To YodaChat I welcome you. Yess, hmmm.</p>
+        <button id="myImg" onclick="respond()">Click Me!</button>
 
     </body>
 </html>

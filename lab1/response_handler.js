@@ -22,4 +22,9 @@ let std_quotes = ["Patience you must have, my young padawan.",
 function respond() {
     // Your Code Here
     console.log("Hello World!");
+    var yourImg = document.getElementById('myImg')
+    if(yourImg && yourImg.style) {
+        yourImg.style.height = '100px';
+        yourImg.style.width = '200px';
+        }
 }
