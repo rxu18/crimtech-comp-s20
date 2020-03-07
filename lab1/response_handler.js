@@ -21,5 +21,40 @@ let std_quotes = ["Patience you must have, my young padawan.",
 
 function respond() {
     // Your Code Here
-    console.log("Hello World!");
+	var img = document.getElementById("yoda-img");
+	var msg = document.getElementById("msgbox");
+	//console.log(msg.value);
+	//img.src = "img/cute-dark.jpg";
+	// process image
+	var imgloc = "img/";
+	if (msg.value.indexOf("cute") != -1 || msg.value.indexOf("baby")) {
+		imgloc += "cute-";
+	} else {
+		imgloc += "regular-";
+	}
+	if (msg.value.indexOf("force") != -1 && msg.value.indexOf("dark") != -1) {
+		imgloc += "dark";
+	} else if (msg.value.indexOf("force") != -1) {
+		imgloc += "force";
+	} else {
+		imgloc += "std";
+	}
+	imgloc += ".jpg";
+	img.src = imgloc;
+
+	// output random quote
+ 	var quote = document.getElementById("yoda-quote");
+	if (msg.value.indexOf("cute") != -1 || msg.value.indexOf("baby") != -1) {
+		quote.innerHTML = "h" + "m".repeat(Math.floor((Math.random()*28)+3)) + "...";
+	} else if (msg.value.indexOf("dark") != -1) {
+		quote.innerHTML = dark_quotes[Math.floor((Math.random()*dark_quotes.length))];
+	} else if (msg.value.indexOf("force") != -1) {
+		quote.innerHTML = force_quotes[Math.floor((Math.random()*dark_quotes.length))];
+	} else {
+		quote.innerHTML = std_quotes[Math.floor((Math.random()*dark_quotes.length))];
+	}
+
+	msg.value = "";
+    // console.log("Hello World!");
 }
+
