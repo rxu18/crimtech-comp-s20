@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+	<title> Test page </title>
+</head>
+<body>
+	<script>
+		console.log("Try adding \"console.log('Hello World!');\" to test.html!");
+		console.log('Hello World!');
+		var x = 42;
+		console.log(x);
+		x = 378 + x; 
+		console.log(x);
+		var y = "No Vacation";
+		console.log(y);
+		console.log(x+y);
+		y.includes("hello");
+		console.log("The function above checks whether the string assigned to y contains the substring 'hello'");
+		y.repeat(10);
+		console.log("This function repeats the string assigned to y ten times and concatenates them together");
+		function square(i) {
+  			return i * i;   // The function returns the product of p1 and p2
+		}
+		console.log(square(5));
+		square(2.5);
+		square("hello");
+		console.log("square() has no problem squaring non-integer 2.5, but returns an error NaN for having a string instead of a number");
+		square(x)
+		console.log("When I call x, square(x) returns 176400")
+		function square(i){
+		if (typeof i != "number")
+    		return(-1);
+		else
+    		return(i * i);
+		}
+		square("hello")
+
+		console.log("Square() now returns -1 for non numeric i's")
+		function numberString(i) {
+    		var start = 1;
+    		var x = "";
+    		if (i <1)
+        		return(-1);
+    		for (let k = start; k <= i; k++) {
+        		x = x + k + " ";
+    		}
+		console.log(x);
+    		}
+			numberString(10);
+			
+	</script>
+</body>
