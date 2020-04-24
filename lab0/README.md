@@ -7,7 +7,7 @@ Please fill out the [Comp check-in form](https://forms.gle/uhyzJKPUyxch74UW7).
 ## B. Installing Git
 Before you start the lab, be sure to fork an assignment. Make sure you are logged into GitHub and refresh the page. There is a button called `fork` on the upper right. Press it :)
 
-1. The native build environment for Crimson is MacOS. Crimson editors have found success with Linux, but Windows runs into trouble later on. 
+1. The native build environment for Crimson is MacOS. Crimson editors have found success with Linux, but Windows runs into trouble later on.
     * Let us know if you have a Windows computer.
 2. The Crimson uses GitHub, the website you are on right now. To use GitHub you need to install Git. Open up your terminal and run `git --version`. If the command yields an error, you do not have git installed.
     * MacOS: run `brew install git`. If you run into an issue here, call us over.
@@ -25,7 +25,7 @@ Let's make our first commit in this repository. Again, open up your terminal.
 5. To push the commits to github, run `git push`. Now, if you go back to GitHub, you should see your commit there :).
 
 ## D. Installing NodeJS and npm
-In the next 2 labs we will be using Node JS, which extends the functionality of JavaScript. 
+In the next 2 labs we will be using Node JS, which extends the functionality of JavaScript.
 1. In your terminal, run `brew install node`.
 2. Next, check the version of node and npm using `node -v` and `npm -v`. Record the versions in `lab0-responses.md`.
 3. If something weird happened, all us over.
