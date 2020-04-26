@@ -5,5 +5,22 @@
 <body>
 	<script>
 		console.log("Try adding \"console.log('Hello World!');\" to test.html!");
+}
 	</script>
 </body>
+
+function square(i){
+    if (typeof i === "number"){
+		return i*i;
+	}
+	else{
+		return -1;
+	}
+
+function numberString(i){
+	if (typeof i == "number" && i > 0){
+		for(j = 0; j <= i; j++){
+			console.log(j);
+		}
+	}
+}

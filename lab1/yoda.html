@@ -1,9 +1,102 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Yoda Chat</title>
+        <link rel='shortcut icon' type='image/png' href='img/favicon.ico'>
+        <style>
+          img{
+              display: block;
+              margin: 100px auto;
+              margin-bottom: 20px;
+          }
+          .btn-group{
+              text-align: center;
+          }
+          button{
+              padding 10px 30px;
+              font-size: 20px;
+              cursor:pointer;
+          }
+        </style>
+</head>
+<body>
+    <img id="img-area" src="https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png/revision/latest/top-crop/width/360/height/360?cb=20150206140125" alt="">
+    <center>
+    <h3 id="text">"To yoda chat I welcome you. Yes, hmmmmm."</h3>
+    <form name="frmDataEntry" action="processor.html" method="get">
+            <p>
+              <input type = "text" name="myText"
+                     id = "myText"
+                     placeholder = "Type something"
+            </p>
+        </form>
+    </center>
+    <div class="btn-group">
+          <button onclick="respond()" id="button">Response</button>
+    </div>
+    <div id="firstDiv">Text change</div>
+
+<script>
+  var img = document.getElementById("img-area");
+  function respond() {
+      var str = document.getElementById("myText").value;
+      if "cute" || "baby" in str{
+        img.src="https://www.gannett-cdn.com/media/2019/12/18/USATODAY/usatsports/247WallSt.com-247WS-599503-684750b1.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp";
+        }
+      }
+      else if "force" in str{
+        img.src="https://lumiere-a.akamaihd.net/v1/images/01_194dfed7.jpeg?region=0%2C32%2C1024%2C512";
+        document.getElementById("text").onclick = function(){
+          document.getElementById("firstDiv").innerHTML = ""
+      }
+      else if "dark" && "force" in str{
+        img.src="https://vignette.wikia.nocookie.net/starwars/images/a/a8/YodaPalpsduel.png/revision/latest/top-crop/width/360/height/450?cb=20130205183735";
+      }
+  }
+</script>
+</body>
+</html>
+
+<!-- https://d.newsweek.com/en/full/1548181/baby-yoda-mandalorian.jpg -->
+<!-- Add in a button that calls the respond() function in response_handler.js.
+You will need to add a <script> tag in the <head> section of the HTML,
+and set the onclick attribute of the button. If you have done this correctly, pressing the buttom will cause Hello World! to appear in your console.
+
+Add code to the respond() function so that it changes the image and text of the page.
+You do not need use the input box or any fancy control flows yet. Y
+you may want to use the function document.getElementById("some_id"), setattribute() and set an ID for the image and text box.
+Make the response() function log the content of the textbox onto the console.
+Now, add if statements to decide which image and text the page should change to.
+You should have the following if structure:
+
+If there is the word cute or baby in the textbox, have a picture of Baby Yoda.
+If there is the word force in the textbox, Yoda should be using the force.
+If there is both dark and force in the textbox, Yoda should be battling some Sith lord.
+Yoda should say a random quote from either std_quotes, dark_quotes, force_quotes. Baby Yoda has not learned those quotes yet.
+Yoda loves saying hmmmmmmmmmmmmm. We have Yoda print a large, random number of m's.
+Change response() so that it clears the textbox every time we press the button.
+Right now we have to press the button in order to make Yoda change text. It would be a lot easier if we can just press enter to update the page! Search up how to do it on Google, and implement it. -->
+<!--
+
+<!DOCTYPE html>
 <html>
     <head>
-        
+        <title>Yoda Chat</title>
+        <link rel='shortcut icon' type='image/png' href='img/favicon.ico'>
+        <center>
+          <img src="https://lumiere-a.akamaihd.net/v1/images/01_194dfed7.jpeg?region=0%2C32%2C1024%2C512" class ="yoda" height="400" width="700" alt="centered image" /></img>
+          <p id="text">"To yoda chat I welcome you. Yes, hmmmmm."</p>
+          <script language="Javascript">
+          function respond() {
+              this.setAttribute("src", "https://d.newsweek.com/en/full/1548181/baby-yoda-mandalorian.jpg")
+          }
+          </script>
+        </center>
     </head>
     <body>
-
+      <center>
+        <button onclick=respond>Click me!</button>
+      </center>
     </body>
-</html>
+</html> -->
