@@ -24,36 +24,59 @@
     <img id="img-area" src="https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png/revision/latest/top-crop/width/360/height/360?cb=20150206140125" alt="">
     <center>
     <h3 id="text">"To yoda chat I welcome you. Yes, hmmmmm."</h3>
-    <form name="frmDataEntry" action="processor.html" method="get">
-            <p>
-              <input type = "text" name="myText"
-                     id = "myText"
-                     placeholder = "Type something"
-            </p>
-        </form>
+    <p>
+      <input type = "text" name="myText"
+        id = "myText"
+        placeholder = "Type something">
+    </p>
     </center>
     <div class="btn-group">
           <button onclick="respond()" id="button">Response</button>
-    </div>
-    <div id="firstDiv">Text change</div>
-
 <script>
+let dark_quotes = ["Once you start down the dark path, forever will it dominate your destiny, consume you it will.",
+"In a dark place we find ourselves, and a little more knowledge lights our way.",
+"Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.",
+"Always two there are, no more, no less. A master and an apprentice.",
+"In the end, cowards are those who follow the dark side."];
+let force_quotes = ["Luminous beings are we, not this crude matter.",
+"A Jedi uses the Force for knowledge and defense, never for attack.",
+"Clear your mind must be, if you are to find the villains behind this plot.",
+"The force. Life creates it, makes it grow. Its energy surrounds us and binds us.",
+"My ally is the Force, and a powerful ally it is."];
+let std_quotes = ["Patience you must have, my young padawan.",
+"When nine hundred years old you reach, look as good you will not.",
+"No! Try not! Do or do not, there is no try.",
+"Judge me by my size, do you?",
+"Difficult to see. Always in motion is the future."
+];
   var img = document.getElementById("img-area");
+  document.getElementById("myText").addEventListener("keydown", function(e){
+    if (e.keyCode === 13){
+      respond();
+    }
+});
+
   function respond() {
       var str = document.getElementById("myText").value;
-      if "cute" || "baby" in str{
+      var quote = "";
+      if (str.includes("cute") || str.includes("baby")) {
         img.src="https://www.gannett-cdn.com/media/2019/12/18/USATODAY/usatsports/247WallSt.com-247WS-599503-684750b1.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp";
         }
-      }
-      else if "force" in str{
+      else if (str.includes("force")){
         img.src="https://lumiere-a.akamaihd.net/v1/images/01_194dfed7.jpeg?region=0%2C32%2C1024%2C512";
-        document.getElementById("text").onclick = function(){
-          document.getElementById("firstDiv").innerHTML = ""
+        quote = force_quotes[Math.floor(Math.random() * 5)];
       }
-      else if "dark" && "force" in str{
+      else if (str.includes("dark") && str.includes("force")) {
         img.src="https://vignette.wikia.nocookie.net/starwars/images/a/a8/YodaPalpsduel.png/revision/latest/top-crop/width/360/height/450?cb=20130205183735";
+        quote = dark_quotes[Math.floor(Math.random() * 5)];
       }
-  }
+      else{
+        img.src="https://vignette.wikia.nocookie.net/starwars/images/a/a8/YodaPalpsduel.png/revision/latest/top-crop/width/360/height/450?cb=20130205183735";
+        quote = std_quotes[Math.floor(Math.random() * 5)];
+      }
+      document.getElementById("myText").value = ""
+      document.getElementById("text").innerHTML =  quote + " Yes, h" + "m".repeat(Math.ceil(Math.random()*10));
+}
 </script>
 </body>
 </html>
