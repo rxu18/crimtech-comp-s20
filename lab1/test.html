@@ -5,5 +5,42 @@
 <body>
 	<script>
 		console.log("Try adding \"console.log('Hello World!');\" to test.html!");
+		x = 42;
+		console.log(x);
+		console.log(x + 378);
+		y = "oranges";
+		console.log(x+y);
+		y.includes("hello");
+		y.repeat(10);
+
+		function square(i){
+			return i*i;
+		}
+		square(5);
+		square(2.5);
+		square("hello");
+
+		function square(x){
+			if (isNaN(x)){
+				return -1;
+			}
+			else
+			{
+			return x*x;
+			}
+		}
+
+		function numberString(x){
+			if (isNaN(x) || x < 0){
+				return "please input a positive number";
+			}
+			else {
+				for (var i = 0; i <= x; i++){
+					answer += i;
+				}
+				return answer;
+			}
+		}
 	</script>
 </body>
+</html>

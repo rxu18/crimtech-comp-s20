@@ -19,7 +19,61 @@ let std_quotes = ["Patience you must have, my young padawan.",
 "Difficult to see. Always in motion is the future."
 ];
 
+
+var input = document.getElementById("myQuotes");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+    }
+});
+
 function respond() {
-    // Your Code Here
-    console.log("Hello World!");
-}
+    var cutePhotos = new Array("img/cute-dark.jpg","img/cute-force.jpg","img/cute-std.jpg");
+    var m = "m"
+    
+    // for cute photos
+    if (document.getElementById("myQuotes").value.includes("cute") || document.getElementById("myQuotes").value.includes("baby")) 
+    {
+        if (document.getElementById("myQuotes").value.includes("dark")) 
+        {
+            if (document.getElementById("myQuotes").value.includes("force"))
+            {
+                document.getElementById("myPic").src = "img/cute-force.jpg";
+                document.getElementById("ranQuote").textContent = "Yes, h"+m.repeat(Math.floor(Math.random() * 20));
+            }
+            else
+            {
+                document.getElementById("myPic").src = "img/cute-dark.jpg";
+                document.getElementById("ranQuote").textContent = "Yes, h"+m.repeat(Math.floor(Math.random() * 20));
+            }
+            
+        }
+        else 
+        {
+            var cutequote = Math.floor(Math.random() * cutePhotos.length);
+            document.getElementById("myPic").src = cutePhotos[cutequote];
+            document.getElementById("ranQuote").textContent = "Yes, h"+m.repeat(Math.floor(Math.random() * 20));
+        }
+    }
+    // for dark/force photos
+    else  
+    {
+        if (document.getElementById("myQuotes").value.includes("force")) 
+        {
+            if (document.getElementById("myQuotes").value.includes("dark"))
+            {
+                document.getElementById("myPic").src = "img/regular-dark.jpg";
+                var darkquote = Math.floor(Math.random() * dark_quotes.length);
+                document.getElementById("ranQuote").textContent = dark_quotes[darkquote]
+            }
+            else
+            {
+                document.getElementById("myPic").src = "img/regular-force.jpg";
+                var forcequote = Math.floor(Math.random() * force_quotes.length);
+                document.getElementById("ranQuote").textContent = force_quotes[forcequote]
+            }
+        }
+    }
+    document.getElementById("myQuotes").value = "";
+} 
